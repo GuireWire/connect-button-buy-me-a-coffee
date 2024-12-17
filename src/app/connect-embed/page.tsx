@@ -8,7 +8,7 @@ import { createWallet } from "thirdweb/wallets";
 const ConnectEmbedPage: React.FC = () => {
     return (
         <div className="py-20">
-            <Header 
+            <Header
                 title="ConnectEmbed UI Component"
                 subtitle="Learn what our ConnectEmbed UI component is, how to use it, and how to customize it."
             />
@@ -20,11 +20,11 @@ const ConnectEmbedPage: React.FC = () => {
 
 function ConnectEmbeds() {
     return (
-      <div className="grid gap-4 lg:grid-cols-3 justify-center">
-        <DefaultConnectEmbed />
-        <CustomWalletsConnectEmbed />
-        <CustomThemeConnectEmbed />
-      </div>
+        <div className="grid gap-4 lg:grid-cols-3 justify-center">
+            <DefaultConnectEmbed />
+            <CustomWalletsConnectEmbed />
+            <CustomThemeConnectEmbed />
+        </div>
     );
 }
 
@@ -35,13 +35,13 @@ function DefaultConnectEmbed() {
 
     return (
         <div className="flex flex-col items-center mb-20 md:mb-20">
-            <p  className="text-zinc-300 text-base mb-4 md:mb-4">Default Connect Embed</p>
+            <p className="text-zinc-300 text-base mb-4 md:mb-4">Default Connect Embed</p>
             <ConnectEmbed
                 client={client}
             />
             {/* Show ConnectButton in connect state when wallet is connected */}
             {account && (
-                <ConnectButton 
+                <ConnectButton
                     client={client}
                 />
             )}
@@ -66,10 +66,10 @@ function CustomWalletsConnectEmbed() {
         createWallet("com.exodus"),
         createWallet("com.robinhood.wallet")
     ];
-    
+
     return (
         <div className="flex flex-col items-center mb-20 md:mb-20">
-            <p  className="text-zinc-300 text-base mb-4 md:mb-4">Customize Wallets Connect Embed</p>
+            <p className="text-zinc-300 text-base mb-4 md:mb-4">Customize Wallets Connect Embed</p>
             <ConnectEmbed
                 client={client}
                 // Display custom wallets
@@ -79,7 +79,7 @@ function CustomWalletsConnectEmbed() {
             />
             {/* Show ConnectButton in connect state when wallet is connected */}
             {account && (
-                <ConnectButton 
+                <ConnectButton
                     client={client}
                 />
             )}
@@ -94,7 +94,7 @@ function CustomThemeConnectEmbed() {
 
     return (
         <div className="flex flex-col items-center mb-20 md:mb-20">
-            <p  className="text-zinc-300 text-base mb-4 md:mb-4">Custom Theme Connect Embed</p>
+            <p className="text-zinc-300 text-base mb-4 md:mb-4">Custom Theme Connect Embed</p>
             <ConnectEmbed
                 client={client}
                 // Customize modal theme
@@ -125,7 +125,7 @@ function CustomThemeConnectEmbed() {
             />
             {/* Show ConnectButton in connect state when wallet is connected */}
             {account && (
-                <ConnectButton 
+                <ConnectButton
                     client={client}
                 />
             )}
